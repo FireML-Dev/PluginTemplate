@@ -115,3 +115,6 @@ buildNumber.properties
 
 # Common working directory
 run/
+
+# Exclude the gradle directory
+!gradle/*

@@ -1,4 +1,4 @@
-package uk.firedev.repotemplate;
+package uk.firedev.plugintemplate;
 
 import com.google.gson.Gson;
 import io.papermc.paper.plugin.loader.PluginClasspathBuilder;

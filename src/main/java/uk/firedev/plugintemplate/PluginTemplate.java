@@ -1,19 +1,19 @@
-package uk.firedev.repotemplate;
+package uk.firedev.plugintemplate;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class RepoTemplate extends JavaPlugin {
+public final class PluginTemplate extends JavaPlugin {
 
-    private static RepoTemplate instance;
+    private static PluginTemplate instance;
 
-    public RepoTemplate() {
+    public PluginTemplate() {
         if (instance != null) {
             throw new UnsupportedOperationException(getClass().getName() + " has already been assigned!");
         }
         instance = this;
     }
 
-    public static RepoTemplate getInstance() {
+    public static PluginTemplate getInstance() {
         return instance;
     }
 
