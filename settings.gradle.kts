@@ -1,7 +1,4 @@
-rootProject.name = "DaisyLib"
-
-include(":daisylib-api")
-include(":daisylib-plugin")
+rootProject.name = "PluginTemplate"
 
 dependencyResolutionManagement {
     versionCatalogs {
