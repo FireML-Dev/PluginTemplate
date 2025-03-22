@@ -7,10 +7,10 @@ public final class PluginTemplate extends JavaPlugin {
     public static PluginTemplate INSTANCE;
 
     public PluginTemplate() {
-        if (instance != null) {
+        if (INSTANCE != null) {
             throw new UnsupportedOperationException(getClass().getName() + " has already been assigned!");
         }
-        instance = this;
+        INSTANCE = this;
     }
 
     @Override
