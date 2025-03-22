@@ -4,17 +4,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class PluginTemplate extends JavaPlugin {
 
-    private static PluginTemplate instance;
+    public static PluginTemplate INSTANCE;
 
     public PluginTemplate() {
         if (instance != null) {
             throw new UnsupportedOperationException(getClass().getName() + " has already been assigned!");
         }
         instance = this;
-    }
-
-    public static PluginTemplate getInstance() {
-        return instance;
     }
 
     @Override
