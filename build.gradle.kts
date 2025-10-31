@@ -28,7 +28,7 @@ paper {
     name = project.name
     version = project.version.toString()
     main = "uk.firedev.plugintemplate.PluginTemplate"
-    apiVersion = "1.21.4"
+    apiVersion = "1.21.10"
     author = "FireML"
     description = project.description.toString()
 
@@ -65,7 +65,7 @@ publishing {
             artifactId = rootProject.name
             version = project.version.toString()
 
-            from(components["shadow"])
+            from(components["java"])
         }
     }
 }
@@ -81,5 +81,9 @@ tasks {
     }
     withType<JavaCompile> {
         options.encoding = "UTF-8"
+    }
+    // Use the Google Maven Central proxy to stop Paper from complaining.
+    generatePaperPluginDescription {
+        useGoogleMavenCentralProxy()
     }
 }
