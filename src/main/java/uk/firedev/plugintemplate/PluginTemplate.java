@@ -17,7 +17,7 @@ public final class PluginTemplate extends JavaPlugin {
 
     public static @NotNull PluginTemplate getInstance() {
         if (INSTANCE == null) {
-            throw new UnsupportedOperationException(PluginTemplate.class.getSimpleName() + " has not been assigned!");
+            throw new IllegalStateException(PluginTemplate.class.getSimpleName() + " has not been assigned!");
         }
         return INSTANCE;
     }

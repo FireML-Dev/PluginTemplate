@@ -28,7 +28,7 @@ paper {
     name = project.name
     version = project.version.toString()
     main = "uk.firedev.plugintemplate.PluginTemplate"
-    apiVersion = "1.21.10"
+    apiVersion = "1.21.11"
     author = "FireML"
     description = project.description.toString()
 
