@@ -28,10 +28,10 @@ public class LibraryLoader implements PluginLoader {
         classpathBuilder.addLibrary(resolver);
     }
 
-    public PluginLibraries load() {
+    private PluginLibraries load() {
         try (InputStream in = getClass().getResourceAsStream("/paper-libraries.json")) {
             if (in == null) {
-                return null;
+                throw new RuntimeException("paper-libraries.json not found.");
             }
             return new Gson().fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), PluginLibraries.class);
         } catch (IOException e) {
