@@ -3,6 +3,7 @@ package uk.firedev.plugintemplate;
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
+import uk.firedev.daisylib.DaisyLib;
 
 public final class PluginTemplate extends JavaPlugin {
 
@@ -26,7 +27,10 @@ public final class PluginTemplate extends JavaPlugin {
     public void onLoad() {}
 
     @Override
-    public void onEnable() {}
+    public void onEnable() {
+        // This has to be done in the onEnable method.
+        DaisyLib.get().init(this);
+    }
 
     @Override
     public void onDisable() {}
