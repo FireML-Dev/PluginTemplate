@@ -34,7 +34,7 @@ public final class PluginTemplate extends JavaPlugin {
     private void registerCommands() {
         this.getLifecycleManager().registerEventHandler(LifecycleEvents.COMMANDS, commands -> {
             // Register Brigadier commands here.
-            // commands.registrar().register(new MyCommand().get());
+            // commands.registrar().register(MyCommand.get());
         });
     }
 

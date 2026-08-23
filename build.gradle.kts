@@ -16,11 +16,11 @@ repositories {
 
 dependencies {
     compileOnly(libs.paper.api)
-    compileOnly(libs.daisylib)
+    paperLibrary(libs.daisylib)
 }
 
 group = "uk.firedev"
-version = properties["project-version"] as String
+version = project.property("project-version") as String
 description = "Template Plugin"
 java.sourceCompatibility = JavaVersion.VERSION_25
 
@@ -28,19 +28,12 @@ paper {
     name = project.name
     version = project.version.toString()
     main = "uk.firedev.plugintemplate.PluginTemplate"
-    apiVersion = "26.1"
+    apiVersion = "26.2"
     author = "FireML"
     description = project.description.toString()
 
     loader = "uk.firedev.plugintemplate.LibraryLoader"
     generateLibrariesJson = true
-
-    serverDependencies {
-        register("DaisyLib") {
-            required = true
-            load = PaperPluginDescription.RelativeLoadOrder.BEFORE
-        }
-    }
 }
 
 publishing {
