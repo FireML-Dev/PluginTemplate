@@ -1,6 +1,6 @@
 [libraries]
 # compileOnly
-paper-api = { module = "io.papermc.paper:paper-api", version = "26.2.build.+" }
+paper-api = { module = "io.papermc.paper:paper-api", version = "26.3.build.+" }
 
 # implementation
 
