@@ -6,3 +6,5 @@ updates:
       interval: "daily"
     assignees:
       - "FireML"
+    ignore:
+      - dependency-name: "io.papermc.paper:paper-api"
