@@ -1,3 +1,5 @@
+import net.minecrell.pluginyml.paper.PaperPluginDescription
+
 plugins {
     `java-library`
     `maven-publish`
@@ -26,12 +28,19 @@ paper {
     name = project.name
     version = project.version.toString()
     main = "uk.firedev.plugintemplate.PluginTemplate"
-    apiVersion = "26.2"
+    apiVersion = "26.3"
     author = "FireML"
     description = project.description.toString()
 
     loader = "uk.firedev.plugintemplate.LibraryLoader"
     generateLibrariesJson = true
+
+    serverDependencies {
+        register("DaisyLibPlugin") {
+            required = true
+            load = PaperPluginDescription.RelativeLoadOrder.BEFORE
+        }
+    }
 }
 
 publishing {

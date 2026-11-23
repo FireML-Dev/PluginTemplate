@@ -27,10 +27,7 @@ public final class PluginTemplate extends JavaPlugin {
     public void onLoad() {}
 
     @Override
-    public void onEnable() {
-        // This has to be done in the onEnable method.
-        DaisyLib.get().init(this);
-    }
+    public void onEnable() {}
 
     @Override
     public void onDisable() {}
